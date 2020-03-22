@@ -1,34 +1,76 @@
-Declare,metatab-latest,,,
-Title,COVID-19 Data,,,
-Description,"COVID 19 cases data from John-Hopkins, augmented and reformtted",,,
-Identifier,f47162ed-11b7-4a1f-84ae-862e59aca0f3,,,
-Name,jhu.edu-covid19-1,,,
-Dataset,covid19,,,
-Origin,jhu.edu,,,
-Time,,,,
-Space,,,,
-Grain,,,,
-Variant,,,,
-Version,1,,,
-Created,2020-03-21T19:27:44,,,
-Modified,2020-03-21T19:27:44,,,
-Giturl,https://github.com/metatab-packages/metatab-packages.git,,,
-,,,,
+Declare,metatab-latest
+Title,COVID-19 Data
+Description,"COVID 19 cases data from John-Hopkins, augmented and reformtted"
+Identifier,f47162ed-11b7-4a1f-84ae-862e59aca0f3
+Name,jhu.edu-covid19-1
+Dataset,covid19
+Origin,jhu.edu
+Time,
+Space,
+Grain,
+Variant,
+Version,1
+Created,2020-03-21T19:27:44
+Modified,2020-03-22T02:41:32
+Giturl,https://github.com/metatab-packages/metatab-packages.git
+Group,covid19
+
+
+
 Section,Contacts,Email,Organization,Url
+Origin,,,John Hopkins University Center for Systems Science and Engineering ,https://systems.jhu.edu/
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-,,,,
+
 Section,Documentation,Title,Description,
+Homepage,https://systems.jhu.edu/research/public-health/ncov/,John Hopkins Project Homepage,,
 Documentation,file:README.md,README,,
-,,,,
+
 Section,References,Name,Description,
+,,,,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/,ts_base_url,Base URL for time series data,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv,confirmed_ts_source,Source for time series of confirmed cases,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv,death_ts_source,Source for time series of deaths,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv,recov_ts_source,Source for time series of recoveries,
-,,,,
-,,,,
-,,,,
+
 Section,Resources,Name,Description,
-Datafile,notebooks/ProcessTimeseries.ipynb,process_ts,,
-,,,,
-Section,Schema,DataType,AltName,Description
+Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_df,confirmed,Confirmed cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#death_df,deaths,Deaths cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#recov_df,recovered,Recoveries cases by date and country,
+
+Section,Schema,DataType,Description,,
+Table,confirmed,,,,
+Table.Column,country,string,County,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,confirmed,integer,Cumulative number of confirmed positives,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days. ",,
+Table.Column,confirmed_log,number,Log of the number of confirmed positive cases,,
+Table,deaths,,,,
+Table.Column,country,string,County,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,death,integer,Cumulative number of deaths,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days. ",,
+Table.Column,death_log,number,Log of the number of deaths,,
+Table,recovered,,,,
+Table.Column,country,string,County,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,recovered,integer,Cumulative number of recoveries,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days. ",,
+Table.Column,recovered_log,number,Log of the number of recoveries,,
