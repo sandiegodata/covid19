@@ -1,0 +1,30 @@
+Declare,metatab-latest
+Title,State and County COVID-19 Cases
+Description,
+Identifier,4a7a679b-0394-4401-be47-26de222a733f
+Name,covidtracking.com-covid19-1
+Dataset,covid19
+Origin,covidtracking.com
+Time,
+Space,
+Grain,
+Variant,
+Version,1
+Created,2020-03-22T18:42:48
+Modified,2020-03-22T18:42:49
+Giturl,https://github.com/sandiegodata/covid19.git
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+
+Section,References,Name,Description,
+Reference,http://covidtracking.com/api/states/daily.csv,states,"Cumulative cases, deaths, hospitalizations, etc for  US states"
+Reference,https://covidtracking.com/api/counties.csv,counties,"Cumulative cases, deaths, hospitalizations, etc for  US counties"
+,,,
+
+Section,Resources,Name,Description,
+
+Section,Schema,DataType,AltName,Description

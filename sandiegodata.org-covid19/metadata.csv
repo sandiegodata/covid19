@@ -1,0 +1,41 @@
+Declare,metatab-latest
+Title,COVID-19 Cases For San Diego County
+Description,"Cases, deaths, hospitalizations and other data scraped from the San Diego COunty"
+Description,COVID-19 website.
+Identifier,6acbbd0c-26f3-4ac2-8cd1-49129dc60b06
+Name,sandiegodata.org-covid19-1
+Dataset,covid19
+Origin,sandiegodata.org
+Time,
+Space,
+Grain,
+Variant,
+Version,1
+Created,2020-03-22T15:38:54
+Modified,2020-03-22T16:59:21
+Giturl,https://github.com/sandiegodata/covid19.git
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+
+Section,References,Name,Description,
+Reference,https://docs.google.com/spreadsheets/d/1RkgOAgmZIcq7WdNvxn4dih_-aX6im3fNd9yrfM1-0Ys/edit#gid=1588490640,spreadsheet,"Google spreadsheet, for humans",
+Reference,gs:1RkgOAgmZIcq7WdNvxn4dih_-aX6im3fNd9yrfM1-0Ys#1588490640,source,Machine readable source file,
+
+Section,Resources,Name,Description,
+Datafile,notebooks/Process.ipynb#df,sd_covid_cases,Notebook for creating dataset.,
+
+Section,Schema,DataType,AltName,Description,
+Table,sd_covid_cases,,,,
+Table.Column,date,date,,,
+Table.Column,Cases,integer,cases,Number of confirmed infections,
+Table.Column,Rate,number,rate,"Instantaneous growth rate, from the previous day",
+Table.Column,Cases_Male,integer,cases_male,Number of case in males,
+Table.Column,Cases_Female,integer,cases_female,Number of cases in females,
+Table.Column,Hospitalized,integer,hospitalized,Number of hospitalizations,
+Table.Column,Intensive Care,integer,intensive_care,Number in intensive_care,
+Table.Column,Deaths,integer,deaths,Number of deaths,
+Table.Column,Notes,string,notes,Notes on each days values.,
