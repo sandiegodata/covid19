@@ -2,17 +2,20 @@ Declare,metatab-latest
 Title,COVID-19 Data
 Description,"COVID 19 cases data from Johns Hopkins, augmented and reformtted"
 Identifier,f47162ed-11b7-4a1f-84ae-862e59aca0f3
-Name,jhu.edu-covid19-4
+Name,jhu.edu-covid19-1.4.2
 Dataset,covid19
 Origin,jhu.edu
 Time,
 Space,
 Grain,
 Variant,
-Version,4
+Version,1.4.2
+Version.Major,1
+Version.Minor,4
+Version.Patch,2
 Group,covid19
 Created,2020-03-21T19:27:44
-Modified,2020-03-23T22:20:35
+Modified,2020-03-26T00:17:37
 Giturl,https://github.com/metatab-packages/metatab-packages.git
 ""
 Section,Contacts,Email,Organization,Url
