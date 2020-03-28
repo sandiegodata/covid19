@@ -2,34 +2,34 @@ Declare,metatab-latest
 Title,State and County COVID-19 Cases
 Description,State and country observations from the Covid Tracking Project
 Identifier,4a7a679b-0394-4401-be47-26de222a733f
-Name,covidtracking.com-covid19-1.2.3
+Name,covidtracking.com-covid19-1.2.5
 Dataset,covid19
 Origin,covidtracking.com
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.3
+Version,1.2.5
 Version.Major,1
 Version.Minor,2
-Version.Patch,3
+Version.Patch,5
 Created,2020-03-22T18:42:48
-Modified,2020-03-26T02:29:34
+Modified,2020-03-27T21:08:03
 Giturl,https://github.com/sandiegodata/covid19.git
-""
+
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-""
+
 Section,Documentation,Title,Description,,
 Documentation,file:README.md,README,,,
 Homepage,https://covidtracking.com/,Homepage,,,
-""
+
 Section,References,Name,Description,,
-""
+
 Section,Resources,Name,Description,,
-Reference,http://covidtracking.com/api/states/daily.csv,states,"Cumulative cases, deaths, hospitalizations, etc for  US states",,
-Reference,https://covidtracking.com/api/counties.csv,counties,"Cumulative cases, deaths, hospitalizations, etc for  US counties",,
-""
+Datafile,http://covidtracking.com/api/states/daily.csv,states,"Cumulative cases, deaths, hospitalizations, etc for  US states",,
+Datafile,https://covidtracking.com/api/counties.csv,counties,"Cumulative cases, deaths, hospitalizations, etc for  US counties",,
+
 Section,Schema,DataType,AltName,Description,Has_Codes
 Table,states,,,,
 Table.Column,date,integer,,,
@@ -51,8 +51,8 @@ Table,counties,,,,
 Table.Column,state,string,,,
 Table.Column,county,string,,,
 Table.Column,covid19Site,string,covid19site,,
-Table.Column,dataSite,unknown,datasite,,
+Table.Column,dataSite,string,datasite,,
 Table.Column,mainSite,string,mainsite,,
-Table.Column,twitter,unknown,,,
+Table.Column,twitter,string,,,
 Table.Column,pui,string,,,
-Table.Column,pum,unknown,,,
+Table.Column,pum,string,,,
