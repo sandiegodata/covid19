@@ -1,47 +1,37 @@
-Declare,metatab-latest,,,,
-Title,COVID-19 Cases For San Diego County,,,,
-Description,"Cases, deaths, hospitalizations and other data scraped from the San Diego COunty",,,,
-Description,COVID-19 website.,,,,
-Identifier,6acbbd0c-26f3-4ac2-8cd1-49129dc60b06,,,,
-Name,sandiegodata.org-covid19-1.2.1,,,,
-Dataset,covid19,,,,
-Origin,sandiegodata.org,,,,
-Time,,,,,
-Space,,,,,
-Grain,,,,,
-Variant,,,,,
-Version,1.2.1,,,,
-Version.Major,1,,,,
-Version.Minor,2,,,,
-Version.Patch,1,,,,
-Created,2020-03-22T15:38:54,,,,
-Modified,2020-03-26T03:17:29,,,,
-Giturl,https://github.com/sandiegodata/covid19.git,,,,
-,,,,,
+Declare,metatab-latest
+Title,COVID-19 Cases For San Diego County
+Description,"Cases, deaths, hospitalizations and other data scraped from the San Diego COunty"
+Description,COVID-19 website.
+Identifier,6acbbd0c-26f3-4ac2-8cd1-49129dc60b06
+Name,sandiegodata.org-covid19-1.2.5
+Dataset,covid19
+Origin,sandiegodata.org
+Time,
+Space,
+Grain,
+Variant,
+Version,1.2.5
+Version.Major,1
+Version.Minor,2
+Version.Patch,5
+Created,2020-03-22T15:38:54
+Modified,2020-03-28T19:12:47
+Giturl,https://github.com/sandiegodata/covid19.git
+""
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-,,,,,
+""
 Section,Documentation,Title,Description,,
 Documentation,file:README.md,README,,,
-,,,,,
+""
 Section,References,Name,Description,,
 Reference,https://docs.google.com/spreadsheets/d/1RkgOAgmZIcq7WdNvxn4dih_-aX6im3fNd9yrfM1-0Ys/edit#gid=1588490640,spreadsheet,"Google spreadsheet, for humans",,
 Reference,gs:1RkgOAgmZIcq7WdNvxn4dih_-aX6im3fNd9yrfM1-0Ys#1588490640,source,Machine readable source file,,
-,,,,,
+""
 Section,Resources,Name,Description,,
 Datafile,notebooks/Process.ipynb#df,sd_covid_cases,Notebook for creating dataset.,,
-,,,,,
+""
 Section,Schema,DataType,AltName,Description,Has_Codes
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
 Table,sd_covid_cases,,,,
 Table.Column,date,date,,,
 Table.Column,Cases,integer,cases,Number of confirmed infections,

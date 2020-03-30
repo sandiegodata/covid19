@@ -2,51 +2,36 @@ Declare,metatab-latest
 Title,State and County COVID-19 Cases
 Description,State and country observations from the Covid Tracking Project
 Identifier,4a7a679b-0394-4401-be47-26de222a733f
-Name,covidtracking.com-covid19-1.2.5
+Name,covidtracking.com-covid19-2.1.2
 Dataset,covid19
 Origin,covidtracking.com
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.5
-Version.Major,1
-Version.Minor,2
-Version.Patch,5
+Version,2.1.2
+Version.Major,2
+Version.Minor,1
+Version.Patch,2
 Created,2020-03-22T18:42:48
-Modified,2020-03-27T21:08:03
+Modified,2020-03-28T14:27:35
 Giturl,https://github.com/sandiegodata/covid19.git
-
+""
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-
+""
 Section,Documentation,Title,Description,,
 Documentation,file:README.md,README,,,
 Homepage,https://covidtracking.com/,Homepage,,,
-
+Note,Version 2.x.x: Upstream added 'hash' columns,,,,
+""
 Section,References,Name,Description,,
-
+""
 Section,Resources,Name,Description,,
 Datafile,http://covidtracking.com/api/states/daily.csv,states,"Cumulative cases, deaths, hospitalizations, etc for  US states",,
 Datafile,https://covidtracking.com/api/counties.csv,counties,"Cumulative cases, deaths, hospitalizations, etc for  US counties",,
-
+""
 Section,Schema,DataType,AltName,Description,Has_Codes
-Table,states,,,,
-Table.Column,date,integer,,,
-Table.Column,state,string,,,
-Table.Column,positive,integer,,,
-Table.Column,negative,integer,,,
-Table.Column,pending,integer,,,
-Table.Column,hospitalized,integer,,,
-Table.Column,death,integer,,,
-Table.Column,total,integer,,,
-Table.Column,dateChecked,datetime,datechecked,,
-Table.Column,totalTestResults,integer,totaltestresults,,
-Table.Column,deathIncrease,integer,deathincrease,,
-Table.Column,hospitalizedIncrease,integer,hospitalizedincrease,,
-Table.Column,negativeIncrease,integer,negativeincrease,,
-Table.Column,positiveIncrease,integer,positiveincrease,,
-Table.Column,totalTestResultsIncrease,integer,totaltestresultsincrease,,
 Table,counties,,,,
 Table.Column,state,string,,,
 Table.Column,county,string,,,
@@ -56,3 +41,21 @@ Table.Column,mainSite,string,mainsite,,
 Table.Column,twitter,string,,,
 Table.Column,pui,string,,,
 Table.Column,pum,string,,,
+Table,states,,,,
+Table.Column,date,integer,,,
+Table.Column,state,string,,,
+Table.Column,positive,integer,,,
+Table.Column,negative,integer,,,
+Table.Column,pending,integer,,,
+Table.Column,hospitalized,integer,,,
+Table.Column,death,integer,,,
+Table.Column,total,integer,,,
+Table.Column,hash,string,,,
+Table.Column,dateChecked,datetime,datechecked,,
+Table.Column,totalTestResults,integer,totaltestresults,,
+Table.Column,fips,integer,,,
+Table.Column,deathIncrease,integer,deathincrease,,
+Table.Column,hospitalizedIncrease,integer,hospitalizedincrease,,
+Table.Column,negativeIncrease,integer,negativeincrease,,
+Table.Column,positiveIncrease,integer,positiveincrease,,
+Table.Column,totalTestResultsIncrease,integer,totaltestresultsincrease,,

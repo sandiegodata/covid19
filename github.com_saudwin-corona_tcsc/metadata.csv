@@ -1,0 +1,27 @@
+Declare,metatab-latest
+Title,State COVID-19 Emergency Dates
+Description,Dates that each state declared a state of emergecy because of the COVID-19 pandemic. 
+Identifier,5d0d7a31-a3ba-4338-9ad5-fe7d4597000f
+Name,github.com_saudwin-corona_tcsc-1
+Dataset,corona_tcsc
+Origin,github.com_saudwin
+Time,
+Space,
+Grain,
+Variant,
+Version,1
+Created,2020-03-30T02:20:12
+Modified,2020-03-30T02:20:13
+Giturl,https://github.com/sandiegodata/covid19.git
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+
+Section,References,Name,Description,
+
+Section,Resources,Name,Description,
+Datafile,https://raw.githubusercontent.com/saudiwin/corona_tscs/master/data/state_emergency_wikipedia.csv,state_emergency,Dates that states declared a state of emergency because of COVID-19
+Section,Schema,DataType,AltName,Description

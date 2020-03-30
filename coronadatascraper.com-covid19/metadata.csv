@@ -1,35 +1,35 @@
-Declare,metatab-latest
-Title,COVID19 Data scraped from global sources
-Description,A very conprehensive collection of automatically scraped data.
-Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366
-Name,coronadatascraper.com-covid19-1.1.4
-Dataset,covid19
-Origin,coronadatascraper.com
-Time,
-Space,
-Grain,
-Variant,
-Version,1.1.4
-Version.Major,1
-Version.Minor,1
-Version.Patch,4
-Created,2020-03-23T14:55:41
-Modified,2020-03-27T15:16:00
-Giturl,https://github.com/sandiegodata/covid19.git
-""
+Declare,metatab-latest,,,,
+Title,COVID19 Data scraped from global sources,,,,
+Description,A very conprehensive collection of automatically scraped data.,,,,
+Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366,,,,
+Name,coronadatascraper.com-covid19-1.1.6,,,,
+Dataset,covid19,,,,
+Origin,coronadatascraper.com,,,,
+Time,,,,,
+Space,,,,,
+Grain,,,,,
+Variant,,,,,
+Version,1.1.6,,,,
+Version.Major,1,,,,
+Version.Minor,1,,,,
+Version.Patch,6,,,,
+Created,2020-03-23T14:55:41,,,,
+Modified,2020-03-28T14:27:25,,,,
+Giturl,https://github.com/sandiegodata/covid19.git,,,,
+,,,,,
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-""
+,,,,,
 Section,Documentation,Title,Description,,
 Homepage,https://coronadatascraper.com/#home,homepage,"Project homepage, sith links to files and documentation",,
 Documentation,file:README.md,README,,,
-""
+,,,,,
 Section,References,Name,Description,,
-""
+,,,,,
 Section,Resources,Name,Description,,
 Datafile,https://coronadatascraper.com/timeseries-tidy.csv,source_tidy,"Data file directly from the source website, with one row for each type of observation.",,
 Datafile,https://coronadatascraper.com/timeseries.csv,source,"Data file directly from source website, with one row per region per day and one type of observation per column.",,
-""
+,,,,,
 Section,Schema,DataType,Description,Has_Codes,Altname
 Table,source_tidy,,,,
 Table.Column,city,string,City Name,,
