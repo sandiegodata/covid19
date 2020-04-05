@@ -1,4 +1,4 @@
-# State Emergency Dates
+# State COVID-19 Emergency Dates
 
 In support of a proposed model for using exisint data to infer afctual COVID-19
 infection rates, Kubenic (1) collected data on the dates that US states

@@ -1,37 +1,39 @@
-Declare,metatab-latest,,,,
-Title,COVID19 Data scraped from global sources,,,,
-Description,A very conprehensive collection of automatically scraped data.,,,,
-Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366,,,,
-Name,coronadatascraper.com-covid19-1.1.6,,,,
-Dataset,covid19,,,,
-Origin,coronadatascraper.com,,,,
-Time,,,,,
-Space,,,,,
-Grain,,,,,
-Variant,,,,,
-Version,1.1.6,,,,
-Version.Major,1,,,,
-Version.Minor,1,,,,
-Version.Patch,6,,,,
-Created,2020-03-23T14:55:41,,,,
-Modified,2020-03-28T14:27:25,,,,
-Giturl,https://github.com/sandiegodata/covid19.git,,,,
-,,,,,
+Declare,metatab-latest
+Title,COVID19 Data scraped from global sources
+Description,A very conprehensive collection of automatically scraped data.
+Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366
+Name,coronadatascraper.com-covid19-1.1.10
+Dataset,covid19
+Origin,coronadatascraper.com
+Time,
+Space,
+Grain,
+Variant,
+Version,1.1.10
+Version.Major,1
+Version.Minor,1
+Version.Patch,10
+Created,2020-03-23T14:55:41
+Modified,2020-04-04T02:05:16
+Giturl,https://github.com/sandiegodata/covid19.git
+""
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-,,,,,
+""
 Section,Documentation,Title,Description,,
 Homepage,https://coronadatascraper.com/#home,homepage,"Project homepage, sith links to files and documentation",,
 Documentation,file:README.md,README,,,
-,,,,,
+""
 Section,References,Name,Description,,
-,,,,,
+""
 Section,Resources,Name,Description,,
 Datafile,https://coronadatascraper.com/timeseries-tidy.csv,source_tidy,"Data file directly from the source website, with one row for each type of observation.",,
 Datafile,https://coronadatascraper.com/timeseries.csv,source,"Data file directly from source website, with one row per region per day and one type of observation per column.",,
-,,,,,
+""
 Section,Schema,DataType,Description,Has_Codes,Altname
 Table,source_tidy,,,,
+Table.Column,name,text,,,
+Table.Column,level,string,,,
 Table.Column,city,string,City Name,,
 Table.Column,county,string,County Name,,
 Table.Column,state,text,State Name,,
@@ -39,23 +41,28 @@ Table.Column,country,string,Country code,,
 Table.Column,population,integer,Total population of the region,,
 Table.Column,lat,number,Latitude,,
 Table.Column,long,number,Longitude,,
-Table.Column,url,string,Source Url,,
+Table.Column,aggregate,string,,,
+Table.Column,tz,string,,,
 Table.Column,date,date,Observation Date,,
 Table.Column,type,string,"Type of observation: cases, deaths, recovered or active",,
 Table.Column,value,number,Value of the observatoin.,,
 Table,source,,,,
+Table.Column,name,text,,,
+Table.Column,level,string,,,
 Table.Column,city,string,City Name,,
 Table.Column,county,string,County Name,,
 Table.Column,state,text,State Name,,
 Table.Column,country,string,Country code,,
-Table.Column,population,integer,Total population of the region,,
+Table.Column,population,number,Total population of the region,,
 Table.Column,lat,number,Latitude,,
 Table.Column,long,number,Longitude,,
 Table.Column,url,string,Source Url,,
-Table.Column,cases,number,"Sum of deaths, recoveries and active.",,
+Table.Column,aggregate,string,,,
+Table.Column,tz,string,,,
+Table.Column,cases,integer,"Sum of deaths, recoveries and active.",,
 Table.Column,deaths,integer,Cumulative number of deaths,,
 Table.Column,recovered,integer,Cumulative number of recoveries,,
-Table.Column,active,number,Cumulative number of active confirmed infections.,,
+Table.Column,active,integer,Cumulative number of active confirmed infections.,,
 Table.Column,tested,integer,Number tested,,
-Table.Column,growthfactor,number,"Growth factor, compared to previous observation. 1+ growth rate",,
+Table.Column,growthFactor,number,"Growth factor, compared to previous observation. 1+ growth rate",,growthfactor
 Table.Column,date,date,Observation Date,,

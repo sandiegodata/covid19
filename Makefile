@@ -10,6 +10,7 @@ PACKAGE_NAMES=\
 jhu.edu-covid19 \
 sandiegodata.org-covid19 \
 coronadatascraper.com-covid19 \
-covidtracking.com-covid19
+covidtracking.com-covid19 \
+healthdata.org-hospitalizations
 
 include $(shell mp mk)
