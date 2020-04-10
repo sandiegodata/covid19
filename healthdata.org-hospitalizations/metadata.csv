@@ -1,41 +1,41 @@
-Declare,metatab-latest,,,,
-Title,Hospital Utilization Forecasts,,,,
-Description,"Forecasts for state and national utilization of hospital beads, ICUs and deaths",,,,
-Description,ventilators,,,,
-Identifier,e5c5bca1-2fee-4d67-8af8-b9f5bc35eed8,,,,
-Name,healthdata.org-hospitalizations-1.1.3,,,,
-Dataset,hospitalizations,,,,
-Origin,healthdata.org,,,,
-Time,,,,,
-Space,,,,,
-Grain,,,,,
-Variant,,,,,
-Version,1.1.3,,,,
-Version.Major,1,,,,
-Version.Minor,1,,,,
-Version.Patch,3,,,,
-Created,2020-03-31T22:19:43,,,,
-Modified,2020-04-02T14:14:59,,,,
-Giturl,https://github.com/sandiegodata/covid19.git,,,,
-,,,,,
+Declare,metatab-latest
+Title,Hospital Utilization Forecasts
+Description,"Forecasts for state and national utilization of hospital beads, ICUs and deaths"
+Description,ventilators
+Identifier,e5c5bca1-2fee-4d67-8af8-b9f5bc35eed8
+Name,healthdata.org-hospitalizations-1.1.5
+Dataset,hospitalizations
+Origin,healthdata.org
+Time,
+Space,
+Grain,
+Variant,
+Version,1.1.5
+Version.Major,1
+Version.Minor,1
+Version.Patch,5
+Created,2020-03-31T22:19:43
+Modified,2020-04-09T14:35:55
+Giturl,https://github.com/sandiegodata/covid19.git
+""
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-,,,,,
+""
 Section,Documentation,Title,Description,,
 Documentation,file:README.md,README,,,
 Homepage,http://www.healthdata.org/,IHME Homepage,,,
 Homepage,https://covid19.healthdata.org/projections,Vizualization,Interactive vizualization of the report,,
 Documentation,http://www.healthdata.org/sites/default/files/files/research_articles/2020/COVID-forecasting-03252020_4.pdf,Research Report,Overview and summary of the model.,,
-,,,,,
+""
 Section,References,Name,Description,,
-,,,,,
+""
 Section,Resources,Name,Description,,
-Datafile,https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip#.csv,hospitalizations,All utilization estimates for state and the US from the model.,,
-,,,,,
+Datafile,https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip#Hospitalization_all_locs.csv,hospitalizations,All utilization estimates for state and the US from the model.,,
+""
 Section,Schema,DataType,AltName,Description,Has_Codes
 Table,hospitalizations,,,,
 Table.Column,V1,integer,v1,,
-Table.Column,location,string,,,
+Table.Column,location_name,string,,,
 Table.Column,date,date,,,
 Table.Column,allbed_mean,number,,,
 Table.Column,allbed_lower,number,,,
@@ -64,4 +64,3 @@ Table.Column,bedover_upper,number,,,
 Table.Column,icuover_mean,number,,,
 Table.Column,icuover_lower,number,,,
 Table.Column,icuover_upper,number,,,
-Table.Column,location_name,string,,,
