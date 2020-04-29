@@ -3,19 +3,19 @@ Title,Hospital Utilization Forecasts
 Description,"Forecasts for state and national utilization of hospital beads, ICUs and deaths"
 Description,ventilators
 Identifier,e5c5bca1-2fee-4d67-8af8-b9f5bc35eed8
-Name,healthdata.org-hospitalizations-1.1.5
+Name,healthdata.org-hospitalizations-1.2.1
 Dataset,hospitalizations
 Origin,healthdata.org
 Time,
 Space,
 Grain,
 Variant,
-Version,1.1.5
+Version,1.2.1
 Version.Major,1
-Version.Minor,1
-Version.Patch,5
+Version.Minor,2
+Version.Patch,1
 Created,2020-03-31T22:19:43
-Modified,2020-04-09T14:35:55
+Modified,2020-04-25T23:39:35
 Giturl,https://github.com/sandiegodata/covid19.git
 ""
 Section,Contacts,Email,Organization,Url,
@@ -26,6 +26,7 @@ Documentation,file:README.md,README,,,
 Homepage,http://www.healthdata.org/,IHME Homepage,,,
 Homepage,https://covid19.healthdata.org/projections,Vizualization,Interactive vizualization of the report,,
 Documentation,http://www.healthdata.org/sites/default/files/files/research_articles/2020/COVID-forecasting-03252020_4.pdf,Research Report,Overview and summary of the model.,,
+Note,Version 1.2.1 updates the schema.,,,,
 ""
 Section,References,Name,Description,,
 ""
@@ -34,7 +35,6 @@ Datafile,https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zi
 ""
 Section,Schema,DataType,AltName,Description,Has_Codes
 Table,hospitalizations,,,,
-Table.Column,V1,integer,v1,,
 Table.Column,location_name,string,,,
 Table.Column,date,date,,,
 Table.Column,allbed_mean,number,,,

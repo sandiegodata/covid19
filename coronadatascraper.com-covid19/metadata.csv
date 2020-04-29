@@ -2,19 +2,19 @@ Declare,metatab-latest
 Title,COVID19 Data scraped from global sources
 Description,A very conprehensive collection of automatically scraped data.
 Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366
-Name,coronadatascraper.com-covid19-1.1.17
+Name,coronadatascraper.com-covid19-1.2.2
 Dataset,covid19
 Origin,coronadatascraper.com
 Time,
 Space,
 Grain,
 Variant,
-Version,1.1.17
+Version,1.2.2
 Version.Major,1
-Version.Minor,1
-Version.Patch,17
+Version.Minor,2
+Version.Patch,2
 Created,2020-03-23T14:55:41
-Modified,2020-04-10T14:48:17
+Modified,2020-04-28T00:21:24
 Giturl,https://github.com/sandiegodata/covid19.git
 ""
 Section,Contacts,Email,Organization,Url,
@@ -23,12 +23,14 @@ Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowle
 Section,Documentation,Title,Description,,
 Homepage,https://coronadatascraper.com/#home,homepage,"Project homepage, sith links to files and documentation",,
 Documentation,file:README.md,README,,,
+Note,Version 1.2.1 adds -jhu file and tidy file is zipped,,,,
 ""
 Section,References,Name,Description,,
 ""
 Section,Resources,Name,Description,,
-Datafile,https://coronadatascraper.com/timeseries-tidy.csv,source_tidy,"Data file directly from the source website, with one row for each type of observation.",,
-Datafile,https://coronadatascraper.com/timeseries.csv,source,"Data file directly from source website, with one row per region per day and one type of observation per column.",,
+Datafile,https://coronadatascraper.com/timeseries-tidy.csv.zip,source_tidy,"Scraped coronavirus data,  with one row for each type of observation.",,
+Datafile,https://coronadatascraper.com/timeseries-jhu.csv,source_jhu,"Scraped coronavirus data,  in format similar to JHU",,
+Datafile,https://coronadatascraper.com/timeseries.csv,source,"Scraped coronavirus data, with one row per region per day and one type of observation per column.",,
 ""
 Section,Schema,DataType,Description,Has_Codes,Altname
 Table,source_tidy,,,,
@@ -66,3 +68,110 @@ Table.Column,active,integer,Cumulative number of active confirmed infections.,,
 Table.Column,tested,integer,Number tested,,
 Table.Column,growthFactor,number,"Growth factor, compared to previous observation. 1+ growth rate",,growthfactor
 Table.Column,date,date,Observation Date,,
+Table,source_jhu,,,,
+Table.Column,name,text,,,
+Table.Column,level,string,,,
+Table.Column,city,string,,,
+Table.Column,county,text,,,
+Table.Column,state,text,,,
+Table.Column,country,text,,,
+Table.Column,lat,number,,,
+Table.Column,long,number,,,
+Table.Column,population,integer,,,
+Table.Column,url,string,,,
+Table.Column,aggregate,string,,,
+Table.Column,tz,string,,,
+Table.Column,2020-01-22,integer,,,2020_01_22
+Table.Column,2020-01-23,integer,,,2020_01_23
+Table.Column,2020-01-24,integer,,,2020_01_24
+Table.Column,2020-01-25,integer,,,2020_01_25
+Table.Column,2020-01-26,integer,,,2020_01_26
+Table.Column,2020-01-27,integer,,,2020_01_27
+Table.Column,2020-01-28,integer,,,2020_01_28
+Table.Column,2020-01-29,integer,,,2020_01_29
+Table.Column,2020-01-30,integer,,,2020_01_30
+Table.Column,2020-01-31,integer,,,2020_01_31
+Table.Column,2020-02-01,integer,,,2020_02_01
+Table.Column,2020-02-02,integer,,,2020_02_02
+Table.Column,2020-02-03,integer,,,2020_02_03
+Table.Column,2020-02-04,integer,,,2020_02_04
+Table.Column,2020-02-05,integer,,,2020_02_05
+Table.Column,2020-02-06,integer,,,2020_02_06
+Table.Column,2020-02-07,integer,,,2020_02_07
+Table.Column,2020-02-08,integer,,,2020_02_08
+Table.Column,2020-02-09,integer,,,2020_02_09
+Table.Column,2020-02-10,integer,,,2020_02_10
+Table.Column,2020-02-11,integer,,,2020_02_11
+Table.Column,2020-02-12,integer,,,2020_02_12
+Table.Column,2020-02-13,integer,,,2020_02_13
+Table.Column,2020-02-14,integer,,,2020_02_14
+Table.Column,2020-02-15,integer,,,2020_02_15
+Table.Column,2020-02-16,integer,,,2020_02_16
+Table.Column,2020-02-17,integer,,,2020_02_17
+Table.Column,2020-02-18,integer,,,2020_02_18
+Table.Column,2020-02-19,integer,,,2020_02_19
+Table.Column,2020-02-20,integer,,,2020_02_20
+Table.Column,2020-02-21,integer,,,2020_02_21
+Table.Column,2020-02-22,integer,,,2020_02_22
+Table.Column,2020-02-23,integer,,,2020_02_23
+Table.Column,2020-02-24,integer,,,2020_02_24
+Table.Column,2020-02-25,integer,,,2020_02_25
+Table.Column,2020-02-26,integer,,,2020_02_26
+Table.Column,2020-02-27,integer,,,2020_02_27
+Table.Column,2020-02-28,integer,,,2020_02_28
+Table.Column,2020-02-29,integer,,,2020_02_29
+Table.Column,2020-03-01,integer,,,2020_03_01
+Table.Column,2020-03-02,integer,,,2020_03_02
+Table.Column,2020-03-03,integer,,,2020_03_03
+Table.Column,2020-03-04,integer,,,2020_03_04
+Table.Column,2020-03-05,integer,,,2020_03_05
+Table.Column,2020-03-06,integer,,,2020_03_06
+Table.Column,2020-03-07,integer,,,2020_03_07
+Table.Column,2020-03-08,integer,,,2020_03_08
+Table.Column,2020-03-09,integer,,,2020_03_09
+Table.Column,2020-03-10,integer,,,2020_03_10
+Table.Column,2020-03-11,integer,,,2020_03_11
+Table.Column,2020-03-12,integer,,,2020_03_12
+Table.Column,2020-03-13,integer,,,2020_03_13
+Table.Column,2020-03-14,integer,,,2020_03_14
+Table.Column,2020-03-15,integer,,,2020_03_15
+Table.Column,2020-03-16,integer,,,2020_03_16
+Table.Column,2020-03-17,integer,,,2020_03_17
+Table.Column,2020-03-18,integer,,,2020_03_18
+Table.Column,2020-03-19,integer,,,2020_03_19
+Table.Column,2020-03-20,integer,,,2020_03_20
+Table.Column,2020-03-21,integer,,,2020_03_21
+Table.Column,2020-03-22,integer,,,2020_03_22
+Table.Column,2020-03-23,integer,,,2020_03_23
+Table.Column,2020-03-24,integer,,,2020_03_24
+Table.Column,2020-03-25,integer,,,2020_03_25
+Table.Column,2020-03-26,integer,,,2020_03_26
+Table.Column,2020-03-27,integer,,,2020_03_27
+Table.Column,2020-03-28,integer,,,2020_03_28
+Table.Column,2020-03-29,integer,,,2020_03_29
+Table.Column,2020-03-30,integer,,,2020_03_30
+Table.Column,2020-03-31,integer,,,2020_03_31
+Table.Column,2020-04-01,integer,,,2020_04_01
+Table.Column,2020-04-02,integer,,,2020_04_02
+Table.Column,2020-04-03,integer,,,2020_04_03
+Table.Column,2020-04-04,integer,,,2020_04_04
+Table.Column,2020-04-05,integer,,,2020_04_05
+Table.Column,2020-04-06,integer,,,2020_04_06
+Table.Column,2020-04-07,integer,,,2020_04_07
+Table.Column,2020-04-08,integer,,,2020_04_08
+Table.Column,2020-04-09,integer,,,2020_04_09
+Table.Column,2020-04-10,integer,,,2020_04_10
+Table.Column,2020-04-11,integer,,,2020_04_11
+Table.Column,2020-04-12,integer,,,2020_04_12
+Table.Column,2020-04-13,integer,,,2020_04_13
+Table.Column,2020-04-14,integer,,,2020_04_14
+Table.Column,2020-04-15,integer,,,2020_04_15
+Table.Column,2020-04-16,integer,,,2020_04_16
+Table.Column,2020-04-17,integer,,,2020_04_17
+Table.Column,2020-04-18,integer,,,2020_04_18
+Table.Column,2020-04-19,integer,,,2020_04_19
+Table.Column,2020-04-20,integer,,,2020_04_20
+Table.Column,2020-04-21,integer,,,2020_04_21
+Table.Column,2020-04-22,integer,,,2020_04_22
+Table.Column,2020-04-23,integer,,,2020_04_23
+Table.Column,2020-04-24,integer,,,2020_04_24

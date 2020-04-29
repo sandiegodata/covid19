@@ -3,19 +3,19 @@ Title,COVID-19 Cases For San Diego County
 Description,"Cases, deaths, hospitalizations and other data scraped from the San Diego COunty"
 Description,COVID-19 website.
 Identifier,6acbbd0c-26f3-4ac2-8cd1-49129dc60b06
-Name,sandiegodata.org-covid19-1.2.29
+Name,sandiegodata.org-covid19-1.2.44
 Dataset,covid19
 Origin,sandiegodata.org
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.29
+Version,1.2.44
 Version.Major,1
 Version.Minor,2
-Version.Patch,29
+Version.Patch,44
 Created,2020-03-22T15:38:54
-Modified,2020-04-10T15:15:51
+Modified,2020-04-27T05:49:44
 Giturl,https://github.com/sandiegodata/covid19.git
 ""
 Section,Contacts,Email,Organization,Url,

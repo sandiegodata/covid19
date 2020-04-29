@@ -2,20 +2,20 @@ Declare,metatab-latest
 Title,COVID-19 Data
 Description,"COVID 19 cases data from Johns Hopkins, augmented and reformtted"
 Identifier,f47162ed-11b7-4a1f-84ae-862e59aca0f3
-Name,jhu.edu-covid19-2.4.9
+Name,jhu.edu-covid19-2.4.20
 Dataset,covid19
 Origin,jhu.edu
 Time,
 Space,
 Grain,
 Variant,
-Version,2.4.9
+Version,2.4.20
 Version.Major,2
 Version.Minor,4
-Version.Patch,9
+Version.Patch,20
 Group,covid19
 Created,2020-03-21T19:27:44
-Modified,2020-04-10T14:46:23
+Modified,2020-04-27T05:54:08
 Giturl,https://github.com/metatab-packages/metatab-packages.git
 ""
 Section,Contacts,Email,Organization,Url
@@ -30,49 +30,95 @@ Documentation,file:README.md,README,,
 ""
 Section,References,Name,Description,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/,ts_base_url,Base URL for time series data,
-Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv,confirmed_ts_source,Source for time series of confirmed cases,
-Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv,death_ts_source,Source for time series of deaths,
-Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv,recov_ts_source,Source for time series of recoveries,
+Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv,confirmed_ts_source,"Source for time series of confirmed cases, excluding US",
+Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv,death_ts_source,"Source for time series of deaths, excluding US",
+Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv,recov_ts_source,"Source for time series of recoveries, excluding US",
+Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv,confirmed_ts_us_source,"Source for time series of confirmed cases, US Only",
+Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv,death_ts_us_source,"Source for time series of deaths, US Only",
 ""
 Section,Resources,Name,Description,
-Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_df,confirmed,Confirmed cases by date and country,
-Datafile,notebooks/ProcessTimeseries.ipynb#death_df,deaths,Deaths cases by date and country,
-Datafile,notebooks/ProcessTimeseries.ipynb#recov_df,recovered,Recoveries cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_df,confirmed,Confirmed Non-US cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#death_df,deaths,Non-US Death cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#recov_df,recovered,Non-US recoveries cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_us_df,confirmed_us,Confirmed US cases by date and country,
+Datafile,notebooks/ProcessTimeseries.ipynb#death_us_df,deaths_us,US Death  cases by date and country,
 ""
-Section,Schema,DataType,Description,Has_Codes
-Table,confirmed,,,
-Table.Column,country,string,Country,
-Table.Column,province,string,"Province, state, country or other region",
-Table.Column,location,string,Combination of county and province,
-Table.Column,date,datetime,Date of observation,
-Table.Column,confirmed,integer,Cumulative number of confirmed positives,
-Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,
-Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,
-Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,
-Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,
-Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",
-Table.Column,confirmed_log,number,Log of the number of confirmed positive cases,
-Table,deaths,,,
-Table.Column,country,string,Country,
-Table.Column,province,string,"Province, state, country or other region",
-Table.Column,location,string,Combination of county and province,
-Table.Column,date,datetime,Date of observation,
-Table.Column,death,integer,Cumulative number of deaths,
-Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,
-Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,
-Table.Column,date_100,string,Earliest date at which there were more than 100 cases,
-Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,
-Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",
-Table.Column,death_log,number,Log of the number of deaths,
-Table,recovered,,,
-Table.Column,country,string,Country,
-Table.Column,province,string,"Province, state, country or other region",
-Table.Column,location,string,Combination of county and province,
-Table.Column,date,datetime,Date of observation,
-Table.Column,recovered,integer,Cumulative number of recoveries,
-Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,
-Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,
-Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,
-Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,
-Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",
-Table.Column,recovered_log,number,Log of the number of recoveries,
+Section,Schema,DataType,Description,Has_Codes,Altname
+Table,confirmed,,,,
+Table.Column,country,string,Country,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,confirmed,integer,Cumulative number of confirmed positives,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",,
+Table.Column,confirmed_log,number,Log of the number of confirmed positive cases,,
+Table,deaths,,,,
+Table.Column,country,string,Country,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,death,integer,Cumulative number of deaths,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,string,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",,
+Table.Column,death_log,number,Log of the number of deaths,,
+Table,recovered,,,,
+Table.Column,country,string,Country,,
+Table.Column,province,string,"Province, state, country or other region",,
+Table.Column,location,string,Combination of county and province,,
+Table.Column,date,datetime,Date of observation,,
+Table.Column,recovered,integer,Cumulative number of recoveries,,
+Table.Column,date_10,datetime,Earliest date at which there were more than 10 cases,,
+Table.Column,days_10,integer,Number of days since the earliest date of 10 cases,,
+Table.Column,date_100,datetime,Earliest date at which there were more than 100 cases,,
+Table.Column,days_100,integer,Number of days since the earliest date of 100 cases,,
+Table.Column,rate_t5d,number,"Growth rate, averaged over the following 5 days.",,
+Table.Column,recovered_log,number,Log of the number of recoveries,,
+Table,confirmed_us,,,,
+Table.Column,UID,integer,,,uid
+Table.Column,date,datetime,,,
+Table.Column,confirmed,integer,,,
+Table.Column,date_10,datetime,,,
+Table.Column,days_10,integer,,,
+Table.Column,date_100,string,,,
+Table.Column,days_100,integer,,,
+Table.Column,rate_t5d,number,,,
+Table.Column,confirmed_log,number,,,
+Table.Column,iso2,string,,,
+Table.Column,iso3,string,,,
+Table.Column,code3,integer,,,
+Table.Column,FIPS,integer,,,fips
+Table.Column,Admin2,string,,,admin2
+Table.Column,province,string,,,
+Table.Column,country,string,,,
+Table.Column,Lat,number,,,lat
+Table.Column,Long_,number,,,long
+Table.Column,location,string,,,
+Table.Column,Population,integer,,,population
+Table,deaths_us,,,,
+Table.Column,UID,integer,,,uid
+Table.Column,date,datetime,,,
+Table.Column,death,integer,,,
+Table.Column,date_10,datetime,,,
+Table.Column,days_10,integer,,,
+Table.Column,date_100,string,,,
+Table.Column,days_100,integer,,,
+Table.Column,rate_t5d,number,,,
+Table.Column,death_log,number,,,
+Table.Column,iso2,string,,,
+Table.Column,iso3,string,,,
+Table.Column,code3,integer,,,
+Table.Column,FIPS,integer,,,fips
+Table.Column,Admin2,string,,,admin2
+Table.Column,province,string,,,
+Table.Column,country,string,,,
+Table.Column,Lat,number,,,lat
+Table.Column,Long_,number,,,long
+Table.Column,location,string,,,
+Table.Column,Population,integer,,,population
