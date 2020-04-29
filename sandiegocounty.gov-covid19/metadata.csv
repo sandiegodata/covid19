@@ -1,0 +1,105 @@
+Declare,metatab-latest
+Title,COVID 19 Statistics San Diego County
+Description,Official COVID-19 statistics for San Diego County.
+Identifier,9135744c-ff4d-4afc-a319-3ef198f25054
+Name,sandiegocounty.gov-covid19-1.1.3
+Dataset,covid19
+Origin,sandiegocounty.gov
+Variant,,,,,,
+Version,1.1.3,,,,,
+Version.Major,1,,,,,
+Version.Minor,1
+Version.Patch,3
+Group,covid19
+Tag,covid19
+Created,2020-04-27T23:04:20
+Modified,2020-04-29T17:22:24
+Giturl,https://github.com/sandiegodata/covid19.git
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+Origin,,,"County of San Diego, Health and Human Services Agency, Public Health Services, Epidemiology and Immunization Services Branch",
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+
+Section,References,Name,Description,
+
+Section,Resources,Name,Description,
+Datafile,https://opendata.arcgis.com/datasets/1fefbb8df33948cba664d0a9cb71b8c9_0.csv,covid_stats,"COVID-19 cases in San Diego County, by sex and age",
+Datafile,https://opendata.arcgis.com/datasets/748e191d246b4a41b1e81618a308c335_0.csv,covid_jurisdiction,COVID-19 cases by San Diego jurisdiction,
+Datafile,shape+https://opendata.arcgis.com/datasets/748e191d246b4a41b1e81618a308c335_0.zip,covid_jurisdiction_geo,"COVID-19 cases by San Diego jurisdiction, geographic",
+Datafile,https://opendata.arcgis.com/datasets/854d7e48e3dc451aa93b9daf82789089_0.csv,covid_zip,COVID-19 cases by zip code,
+Datafile,shape+https://opendata.arcgis.com/datasets/854d7e48e3dc451aa93b9daf82789089_0.zip,covid_zip_geo,"COVID-19 cases by zip code, geographic",
+
+Section,Schema,DataType,AltName,Description,Has_Codes,Type
+Table,covid_stats,,,,,
+Table.Column,﻿X,number,x,,,
+Table.Column,Y,number,y,,,
+Table.Column,FID,integer,fid,,,
+Table.Column,date,datetime,,,,
+Table.Column,tests,integer,,,,
+Table.Column,positives,integer,,,,
+Table.Column,hospitalized,integer,,,,
+Table.Column,icu,integer,,,,
+Table.Column,deaths,integer,,,,
+Table.Column,newcases,integer,,,,
+Table.Column,age_9,integer,,,,
+Table.Column,age10_19,integer,,,,
+Table.Column,age40_49,integer,,,,
+Table.Column,age50_59,integer,,,,
+Table.Column,age60_69,integer,,,,
+Table.Column,age70_79,integer,,,,
+Table.Column,age80_plus,integer,,,,
+Table.Column,ageunknow,integer,,,,
+Table.Column,age20_29,integer,,,,
+Table.Column,genderfemale,integer,,,,
+Table.Column,gendermale,integer,,,,
+Table.Column,gendeunk,integer,,,,
+Table.Column,age30_39,integer,,,,
+Table.Column,globalid,string,,,,
+Table.Column,newtests,integer,,,,
+Table,covid_jurisdiction,,,,,
+Table.Column,﻿X,number,x,,,
+Table.Column,Y,number,y,,,
+Table.Column,FID,integer,fid,,,
+Table.Column,name,string,,,,
+Table.Column,loctype,string,,,,
+Table.Column,lastupdate,datetime,,,,
+Table.Column,confirmedcases,integer,,,,
+Table.Column,globalid,string,,,,
+Table,covid_jurisdiction_geo,,,,,
+Table.Column,id,integer,,,,int
+Table.Column,FID,integer,fid,,,int
+Table.Column,name,string,,,,str
+Table.Column,loctype,string,,,,str
+Table.Column,lastupdate,date,,,,str
+Table.Column,confirmedc,integer,,,,int
+Table.Column,globalid,string,,,,str
+Table.Column,geometry,string,,,,geometry_type
+Table,covid_zip,,,,,
+Table.Column,﻿X,number,x,,,
+Table.Column,Y,number,y,,,
+Table.Column,FID,integer,fid,,,
+Table.Column,zipcode_zip,integer,,,,
+Table.Column,ziptext,integer,,,,
+Table.Column,case_count,integer,,,,
+Table.Column,updatedate,datetime,,,,
+Table.Column,created_date,datetime,,,,
+Table.Column,created_user,string,,,,
+Table.Column,last_edited_date,datetime,,,,
+Table.Column,last_edited_user,string,,,,
+Table.Column,globalid,string,,,,
+Table,covid_zip_geo,,,,,
+Table.Column,id,integer,,,,int
+Table.Column,FID,integer,fid,,,int
+Table.Column,zipcode_zi,integer,,,,int
+Table.Column,ziptext,integer,,,,str
+Table.Column,case_count,integer,,,,int
+Table.Column,updatedate,date,,,,str
+Table.Column,created_da,date,,,,str
+Table.Column,created_us,string,,,,str
+Table.Column,last_edite,date,,,,str
+Table.Column,last_edi_1,string,,,,str
+Table.Column,globalid,string,,,,str
+Table.Column,geometry,string,,,,geometry_type
