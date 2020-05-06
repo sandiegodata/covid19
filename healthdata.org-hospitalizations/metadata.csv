@@ -3,19 +3,19 @@ Title,Hospital Utilization Forecasts
 Description,"Forecasts for state and national utilization of hospital beads, ICUs and deaths"
 Description,ventilators
 Identifier,e5c5bca1-2fee-4d67-8af8-b9f5bc35eed8
-Name,healthdata.org-hospitalizations-1.2.1
+Name,healthdata.org-hospitalizations-1.2.3
 Dataset,hospitalizations
 Origin,healthdata.org
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.1
+Version,1.2.3
 Version.Major,1
 Version.Minor,2
-Version.Patch,1
+Version.Patch,3
 Created,2020-03-31T22:19:43
-Modified,2020-04-25T23:39:35
+Modified,2020-05-05T20:38:06
 Giturl,https://github.com/sandiegodata/covid19.git
 ""
 Section,Contacts,Email,Organization,Url,

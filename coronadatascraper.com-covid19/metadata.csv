@@ -2,19 +2,19 @@ Declare,metatab-latest
 Title,COVID19 Data scraped from global sources
 Description,A very conprehensive collection of automatically scraped data.
 Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366
-Name,coronadatascraper.com-covid19-1.2.2
+Name,coronadatascraper.com-covid19-1.2.5
 Dataset,covid19
 Origin,coronadatascraper.com
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.2
+Version,1.2.5
 Version.Major,1
 Version.Minor,2
-Version.Patch,2
+Version.Patch,5
 Created,2020-03-23T14:55:41
-Modified,2020-04-28T00:21:24
+Modified,2020-05-05T20:37:15
 Giturl,https://github.com/sandiegodata/covid19.git
 ""
 Section,Contacts,Email,Organization,Url,
