@@ -1,0 +1,3 @@
+[submodule "sdapcd.org-o3pm25"]
+	path = sdapcd.org-o3pm25
+	url = https://github.com/metatab-packages/sdapcd.org-o3pm25.git

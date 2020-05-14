@@ -2,36 +2,37 @@ Declare,metatab-latest
 Title,State and County COVID-19 Cases
 Description,State and country observations from the Covid Tracking Project
 Identifier,4a7a679b-0394-4401-be47-26de222a733f
-Name,covidtracking.com-covid19-3.1.36
+Name,covidtracking.com-covid19-3.1.39
 Dataset,covid19
 Origin,covidtracking.com
 Time,
 Space,
 Grain,
 Variant,
-Version,3.1.36
+Version,3.1.39
 Version.Major,3
 Version.Minor,1
-Version.Patch,36
+Version.Patch,39
 Created,2020-03-22T18:42:48
-Modified,2020-05-05T20:37:37
+Modified,2020-05-14T18:23:21
+UpdateFrequency,P1D
 Giturl,https://github.com/sandiegodata/covid19.git
-""
+
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-""
+
 Section,Documentation,Title,Description,,
 Documentation,file:README.md,README,,,
 Homepage,https://covidtracking.com/,Homepage,,,
 Note,Version 2.x.x: Upstream added 'hash' columns,,,,
 Note,Version 3.x.x: Upstream added Currently and Cumulative fields,,,,
-""
+
 Section,References,Name,Description,,
-""
+
 Section,Resources,Name,Description,,
 Datafile,http://covidtracking.com/api/states/daily.csv,states,"Cumulative cases, deaths, hospitalizations, etc for  US states",,
 Datafile,https://covidtracking.com/api/counties.csv,counties,"Cumulative cases, deaths, hospitalizations, etc for  US counties",,
-""
+
 Section,Schema,DataType,AltName,Description,Has_Codes
 Table,counties,,,,
 Table.Column,state,string,,,

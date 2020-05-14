@@ -2,37 +2,38 @@ Declare,metatab-latest
 Title,COVID 19 Statistics San Diego County
 Description,Official COVID-19 statistics for San Diego County.
 Identifier,9135744c-ff4d-4afc-a319-3ef198f25054
-Name,sandiegocounty.gov-covid19-1.1.10
+Name,sandiegocounty.gov-covid19-1.1.13
 Dataset,covid19
 Origin,sandiegocounty.gov
 Variant,
-Version,1.1.10
+Version,1.1.13
 Version.Major,1
 Version.Minor,1
-Version.Patch,10
+Version.Patch,13
 Group,covid19
 Tag,covid19
 Created,2020-04-27T23:04:20
-Modified,2020-05-05T20:26:19
+Modified,2020-05-14T18:13:40
+UpdateFrequency		,P1D
 Giturl,https://github.com/sandiegodata/covid19.git
-""
+
 Section,Contacts,Email,Organization,Url,,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,,
 Origin,,,"County of San Diego, Health and Human Services Agency, Public Health Services, Epidemiology and Immunization Services Branch",,,
-""
+
 Section,Documentation,Title,Description,,,
 Documentation,file:README.md,README,,,,
 Homepage,http://sdgis-sandag.opendata.arcgis.com/datasets/covid-19-statistics-san-diego-county,Homepage,One of the pages linking to COVID-19 data posted on arcgis.com,,,
-""
+
 Section,References,Name,Description,,,
-""
+
 Section,Resources,Name,Description,,,
 Datafile,https://opendata.arcgis.com/datasets/1fefbb8df33948cba664d0a9cb71b8c9_0.csv,covid_stats,"COVID-19 cases in San Diego County, by sex and age",,,
 Datafile,https://opendata.arcgis.com/datasets/748e191d246b4a41b1e81618a308c335_0.csv,covid_jurisdiction,COVID-19 cases by San Diego jurisdiction,,,
 Datafile,shape+https://opendata.arcgis.com/datasets/748e191d246b4a41b1e81618a308c335_0.zip,covid_jurisdiction_geo,"COVID-19 cases by San Diego jurisdiction, geographic",,,
 Datafile,https://opendata.arcgis.com/datasets/854d7e48e3dc451aa93b9daf82789089_0.csv,covid_zip,COVID-19 cases by zip code,,,
 Datafile,shape+https://opendata.arcgis.com/datasets/854d7e48e3dc451aa93b9daf82789089_0.zip,covid_zip_geo,"COVID-19 cases by zip code, geographic",,,
-""
+
 Section,Schema,DataType,AltName,Description,Has_Codes,Type
 Table,covid_stats,,,,,
 Table.Column,﻿X,number,x,,,

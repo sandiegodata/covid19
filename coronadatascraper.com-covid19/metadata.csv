@@ -2,36 +2,37 @@ Declare,metatab-latest
 Title,COVID19 Data scraped from global sources
 Description,A very conprehensive collection of automatically scraped data.
 Identifier,4679ac3f-8705-42db-98e0-e1cc0adf5366
-Name,coronadatascraper.com-covid19-1.2.5
+Name,coronadatascraper.com-covid19-1.2.8
 Dataset,covid19
 Origin,coronadatascraper.com
 Time,
 Space,
 Grain,
 Variant,
-Version,1.2.5
+Version,1.2.8
 Version.Major,1
 Version.Minor,2
-Version.Patch,5
+Version.Patch,8
 Created,2020-03-23T14:55:41
-Modified,2020-05-05T20:37:15
+Modified,2020-05-14T18:22:54
+UpdateFrequency,P1D
 Giturl,https://github.com/sandiegodata/covid19.git
-""
+
 Section,Contacts,Email,Organization,Url,
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
-""
+
 Section,Documentation,Title,Description,,
 Homepage,https://coronadatascraper.com/#home,homepage,"Project homepage, sith links to files and documentation",,
 Documentation,file:README.md,README,,,
 Note,Version 1.2.1 adds -jhu file and tidy file is zipped,,,,
-""
+
 Section,References,Name,Description,,
-""
+
 Section,Resources,Name,Description,,
 Datafile,https://coronadatascraper.com/timeseries-tidy.csv.zip,source_tidy,"Scraped coronavirus data,  with one row for each type of observation.",,
 Datafile,https://coronadatascraper.com/timeseries-jhu.csv,source_jhu,"Scraped coronavirus data,  in format similar to JHU",,
 Datafile,https://coronadatascraper.com/timeseries.csv,source,"Scraped coronavirus data, with one row per region per day and one type of observation per column.",,
-""
+
 Section,Schema,DataType,Description,Has_Codes,Altname
 Table,source_tidy,,,,
 Table.Column,name,text,,,

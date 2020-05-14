@@ -2,32 +2,33 @@ Declare,metatab-latest
 Title,COVID-19 Data
 Description,"COVID 19 cases data from Johns Hopkins, augmented and reformtted"
 Identifier,f47162ed-11b7-4a1f-84ae-862e59aca0f3
-Name,jhu.edu-covid19-2.4.23
+Name,jhu.edu-covid19-2.4.25
 Dataset,covid19
 Origin,jhu.edu
 Time,
 Space,
 Grain,
 Variant,
-Version,2.4.23
+Version,2.4.25
 Version.Major,2
 Version.Minor,4
-Version.Patch,23
+Version.Patch,25
 Group,covid19
 Created,2020-03-21T19:27:44
-Modified,2020-05-05T20:31:13
+Modified,2020-05-14T00:30:45
+UpdateFrequency,P1D
 Giturl,https://github.com/metatab-packages/metatab-packages.git
-""
+
 Section,Contacts,Email,Organization,Url
 Origin,,,John Hopkins University Center for Systems Science and Engineering,https://systems.jhu.edu/
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-""
+
 Section,Documentation,Title,Description,
 Note,Version 2.x: The upstream source changed the data formats on 3/22,,,
 Note,Version 2.x: Country values that are aggregated from provinces now have a province value of 'aggregate',,,
 Homepage,https://systems.jhu.edu/research/public-health/ncov/,John Hopkins Project Homepage,,
 Documentation,file:README.md,README,,
-""
+
 Section,References,Name,Description,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/,ts_base_url,Base URL for time series data,
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv,confirmed_ts_source,"Source for time series of confirmed cases, excluding US",
@@ -35,14 +36,14 @@ Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv,recov_ts_source,"Source for time series of recoveries, excluding US",
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv,confirmed_ts_us_source,"Source for time series of confirmed cases, US Only",
 Reference,https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv,death_ts_us_source,"Source for time series of deaths, US Only",
-""
+
 Section,Resources,Name,Description,
 Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_df,confirmed,Confirmed Non-US cases by date and country,
 Datafile,notebooks/ProcessTimeseries.ipynb#death_df,deaths,Non-US Death cases by date and country,
 Datafile,notebooks/ProcessTimeseries.ipynb#recov_df,recovered,Non-US recoveries cases by date and country,
 Datafile,notebooks/ProcessTimeseries.ipynb#confirmed_us_df,confirmed_us,Confirmed US cases by date and country,
 Datafile,notebooks/ProcessTimeseries.ipynb#death_us_df,deaths_us,US Death  cases by date and country,
-""
+
 Section,Schema,DataType,Description,Has_Codes,Altname
 Table,confirmed,,,,
 Table.Column,country,string,Country,,
