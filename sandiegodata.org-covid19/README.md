@@ -1,3 +1,7 @@
+# Deprecated! DOn't use this data
+
+[Go here instead. ](https://data.sandiegodata.org/dataset/sandiegocounty-gov-covid19/)
+
 # San Diego County COVID-19 Cases
 
 This dataset is manually extracted from the daily updates to the [San Diego
